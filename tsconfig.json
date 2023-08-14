@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"target": "es6",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"rootDir": "./",
+		"outDir": "./lib/",
+		"strict": true,
+		"declaration": true,
+		"lib": [
+			"ES2021.String"
+		]
+	}
+}
