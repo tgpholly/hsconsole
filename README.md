@@ -19,7 +19,7 @@ Console.customHeader(`xyz started at ${new Date()}`);
 This must be called this before anything is logged to the console!
 
 ## Cleaning up
-It is **important** that you tell hsconsole to clean up before your application closes (i.e in the event on a CTRL+C) so it can be ensured that all log text is flushed to disk and to allow hsconsole to rename the latest log to the date your application was started.
+It is **important** that you tell hsconsole to clean up before your application closes (i.e in the event of a CTRL+C) so it can be ensured that all log text is flushed to disk and to allow hsconsole to rename the latest log to the date your application was started.
 You can do this by calling `cleanup` in, for example, a **SIGINT** event handler:
 ```ts
 process.on("SIGINT", signal => {

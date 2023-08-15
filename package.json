@@ -1,8 +1,9 @@
 {
 	"name": "hsconsole",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "",
-	"main": "index.js",
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
 	"scripts": {
 		"updateCheck": "check-outdated",
 		"build": "tsc --build",
