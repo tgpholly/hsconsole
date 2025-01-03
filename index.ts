@@ -38,13 +38,14 @@ function getTime() : string {
 }
 
 let queuedForLog = "";
+const LOG_FILE_REGEX = /\x1B\[(\d.m|.m)/gm;
 
 function log(tag:LogTag, log:string, logType:LogType) : void {
 	const stringTime = getTime(),
 		  fileTag = TagsForFile[tag],
 		  consoleTag = LogTags[tag];
 
-	queuedForLog += `${stringTime} ${fileTag} ${log}\n`;
+	queuedForLog += `${stringTime} ${fileTag} ${log.replace(LOG_FILE_REGEX, "")}\n`;
 	switch (logType) {
 		case LogType.INFO:
 			return console.log(`${dyetty.green(stringTime)} ${consoleTag} ${log}`);
